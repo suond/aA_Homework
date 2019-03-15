@@ -1,6 +1,6 @@
 class Stack
     def initialize
-      # create ivar to store stack here!
+      # create ivar to store stack here! last in First out
       stk = []
     end
 
@@ -16,10 +16,10 @@ class Stack
 
     def peek
       # returns, but doesn't remove, the top element in the stack
-      stk.first
+      stk.last
     end
 end
-
+#first in first out
 class Queue
     def initialize
         queue = []
@@ -62,9 +62,10 @@ class Map
     def delete(key)
         map.each_with_index do |arr, idx|
             if arr[0] == key
-                map.delete_at(idx) 
+               value = map.delete_at(idx) 
             end
         end
+        value
     end
     
     def show
